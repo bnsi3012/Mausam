@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {{>bodyLinks}}
+</head>
+<body>
+
+     {{>navbar}}
+
+
+   <!-- main-content -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+
+                <div class="row">
+                    <!--left side view -->
+                    <div class="col-md-6 col-12 main_header_left">  
+                         <p>
+                             Welcome to Weather teller app
+                         </p>
+                         <h1>
+                              Get the <span>Real-Time Weather</span> Info of your city
+                         </h1>
+                         <a href="/weather">
+                            <button> 
+                                 Check now
+                            </button>
+                         </a>
+                    </div> 
+        
+        
+                     <!--right side view -->
+                     <div class="col-md-6 col-12 main_header_right">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class=" w-100" src="data:image/png;base64,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" alt="First slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class=" w-100" src="https://i.pinimg.com/originals/bf/dd/b6/bfddb6a0f917932260550ff91928396a.png" alt="Second slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class=" w-100" src="https://www.transparentpng.com/thumb/weather-report/android-weather-icons-png-12.png" alt="Third slide">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                          
+                     </div>
+                </div>    
+
+            </div> 
+
+        </div>
+
+    </div>
+
+
+
+    {{>footer}}
+
+
+</body>
+</html>
